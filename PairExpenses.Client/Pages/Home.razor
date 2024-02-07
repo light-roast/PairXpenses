@@ -1,0 +1,25 @@
+﻿@page "/"
+<PageTitle>PairXpenses</PageTitle>
+<nav>
+    <h1>PairXpenses</h1>
+    <ChargeControl UserA="@UserA" UserB="@UserB" PercentageA="@percentageA" onPercentageAChanged="PercentageAChanged" />
+</nav>
+<hr>
+
+
+@code {
+    // Define fields to store the percentages
+    private int percentageA = 50;
+
+  
+    private string UserA {get; set;} = "User A";
+
+   
+    private string UserB {get; set;} = "User B";
+
+    // Method to handle the change of percentageA
+    private void PercentageAChanged(int newValue)
+    {
+        percentageA = newValue;
+    }
+}
